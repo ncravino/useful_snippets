@@ -82,7 +82,7 @@ cli-execute: create-venv python/dist/
 ##~ Print this help
 .PHONY: help
 help:
-	@busybox awk -f awk/makefile_autodoc.awk ./Makefile | sort 
+	@awk -f awk/makefile_autodoc.awk ./Makefile | sort 
 
 ##~ not phony
 not_phony:
