@@ -20,5 +20,8 @@
         printf "\033[33m%-20s\033[0m %s\n", target, desc;
         desc=""     
 }
+{ #clear if comment not followed by phony
+    desc=""
+}
 
 

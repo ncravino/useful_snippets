@@ -64,9 +64,6 @@ install: create-venv python/dist/
 	. .example_venv/bin/activate && python3 -m pip uninstall -y example_pyproject_cli
 	. .example_venv/bin/activate && python3 -m pip install python/dist/example_pyproject_cli-0.0.1-py3-none-any.whl
 
-.PHONY: undocumented-phony
-undocumented-phony:
-	@echo "I'm a secret"
 
 ##~ See help of example cli
 .PHONY: cli-help 
@@ -86,3 +83,11 @@ cli-execute: create-venv python/dist/
 .PHONY: help
 help:
 	@busybox awk -f awk/makefile_autodoc.awk ./Makefile | sort 
+
+##~ not phony
+not_phony:
+	@echo "not phony"
+
+.PHONY: undocumented-phony
+undocumented-phony:
+	@echo "I'm a secret"
